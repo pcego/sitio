@@ -41,5 +41,12 @@ python app-root/repo/manage.py createsuperuser
 ```
 - Now use your browser to connect to the Admin site.
 
+
+If your deploy can't install django, you will may log in your app by ssh and make:
+'''
+pip install django
+'''
+For log in your app, access your account on OpenShift, select your app and find the url of ssh for your app.
+
 More details on my blog:
 blog.gregorypacheco.com.br    
