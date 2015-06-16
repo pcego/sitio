@@ -40,3 +40,6 @@ git push
 python app-root/repo/manage.py createsuperuser
 ```
 - Now use your browser to connect to the Admin site.
+
+More details on my blog:
+blog.gregorypacheco.com.br    
