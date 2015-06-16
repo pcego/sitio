@@ -1,7 +1,7 @@
 from setuptools import setup
 
-setup(name='django 1.o on Red Hat Openshift',
-    version='1.3',
+setup(name='Django On OpenShift with Django 1.8',
+    version='0.1',
     description='django on OpenShift',
     author='Gregory Pacheco',
     author_email='contato@gregorypacheco.com.br',
