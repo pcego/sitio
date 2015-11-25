@@ -5,6 +5,6 @@ setup(name='recanto',
     description='Site Chacara Recanto da Paz',
     author='pcego',
     author_email='pcego36@gmail.com',
-    url='',
+    url='www.recantodapaz.tk',
     install_requires=['Django==1.8.2',],
 )

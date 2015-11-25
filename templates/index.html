@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+{% block main %}
+{% load static from staticfiles %}
+
+<html lang="pt-br">
+
+<body>
+{% block main %}
+
+<div class=""control-group"">
+        <legend>Bem Vindo!!!!</legend>
+        <div align="center">
+            <img alt="img360" src="{% static "media/capa.jpg" %}"  >
+          </div>
+</div>
+
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+{% endblock %}
+</body>
+</html>

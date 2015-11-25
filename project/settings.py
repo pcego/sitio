@@ -113,10 +113,14 @@ if ON_PAAS:
 else:
     # stock django, local development.
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
+            'default': {
+                'ENGINE': 'django.db.backends.postgresql_psycopg2',  
+                'NAME':     'recanto',
+                'USER':     'postgres',
+                'PASSWORD': 'senha',
+                'HOST':     'localhost',
+                'PORT':     5432,
+            }
     }
 
 
@@ -136,6 +140,15 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
+
+
+MEDIA_URL = '/static/media/'
+
+if ON_PAAS:
+    MEDIA_ROOT = os.path.join(os.environ.get('OPENSHIFT_DATA_DIR'), 'media')
+else: 
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'wsgi','static')
 STATICFILES_FINDERS = (
