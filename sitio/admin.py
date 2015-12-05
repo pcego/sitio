@@ -1,17 +1,16 @@
 from django.contrib import admin
-from sitio.models import Album, Foto
+from sitio.models import Album, Foto, Thumbnail
 
 class AlbumAdmin(admin.ModelAdmin):
-	list_display = ('nome', 'data_criacao')
-	verbose_name_plural = 'Albuns'
+	vebose_name = 'Album Fotos'
+	
 
 class FotoAdmin(admin.ModelAdmin):
-	verbose_name_plural = 'Fotos'
+	vebose_name = 'Fotos'	
 
+class ThumbnailAdmin(admin.ModelAdmin):
+	verbose_name = 'Miniaturas'
 
 admin.site.register(Album, AlbumAdmin)
 admin.site.register(Foto, FotoAdmin)
-
-
-
-
+admin.site.register(Thumbnail, ThumbnailAdmin)
