@@ -7,7 +7,7 @@
 echo "-->oooooooo ACTION HOOK ooooooooooooo: build <--"
 
 if [ ! -d $OPENSHIFT_DATA_DIR/media ]; then
-mkdir $OPENSHIFT_DATA_DIR/media
+	mkdir $OPENSHIFT_DATA_DIR/media
 fi
 
-ln -sf $OPENSHIFT_DATA_DIR/media $OPENSHIFT_REPO_DIR/wsgi/media
+ln -sf $OPENSHIFT_DATA_DIR/media $OPENSHIFT_REPO_DIR/wsgi/static/media
