@@ -6,5 +6,5 @@ setup(name='recanto',
     author='pcego',
     author_email='pcego36@gmail.com',
     url='www.recantodapaz.tk',
-    install_requires=['Django==1.8.2',],
+    install_requires=['Django==1.8.2', 'Pillow',],
 )
