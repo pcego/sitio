@@ -42,14 +42,15 @@
     </div>
 </div>
 
-<div id="links" align = "center">
-    <a href="../static/media/capa.jpg" title="capa" data-gallery>
-        <img src="../static/media/thumbnails/piscina.jpg" alt="piscina">
-    </a>  
-     <a href="../static/media/capa.jpg" title="capa" data-gallery>
-        <img src="../static/media/thumbnails/piscina.jpg" alt="piscina">
-    </a>  
-</div>
+    <div id="links" align = "center">   
+
+            {% for data in foto %}
+                <a href="../static/media/{{data.imagem}}" title="foto" data-gallery>
+                    <img src="../static/media/{{data.thumbnail}}" alt="thumbnail">
+                </a>
+            {% endfor%} 
+                  
+    </div>  
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>

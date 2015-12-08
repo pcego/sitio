@@ -1,12 +1,17 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from sitio.models import Album, Foto
 
 
 def home(request):
 	return render(request, 'index.html')
 
 def piscina(request):
-	return render(request, 'gallery.html')
+	data = {}
+	fotos = Foto.objects.all	
+	data['foto'] = fotos	
+	
+	return render(request, 'gallery.html', data)
 
 def chale(request):
 	return HttpResponse('teste chales')
