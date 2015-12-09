@@ -1,3 +1,4 @@
 /static
 *.pyc
 vpython27
+*.jpg
