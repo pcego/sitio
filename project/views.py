@@ -3,27 +3,47 @@ from django.shortcuts import render
 from sitio.models import Album, Foto
 
 
-def home(request):
+def home(request):	
 	return render(request, 'index.html')
 
 def piscina(request):
 	data = {}
-	fotos = Foto.objects.all	
+	fotos = Foto.objects.filter(album__nome = 'Piscina')	
 	data['foto'] = fotos	
 	
 	return render(request, 'gallery.html', data)
 
 def chale(request):
-	return HttpResponse('teste chales')
+	data = {}
+	fotos = Foto.objects.filter(album__nome = 'Chales')	
+	data['foto'] = fotos	
+	
+	return render(request, 'gallery.html', data)
 
 def cozinha(request):
-	return HttpResponse('teste cozinha')
+	data = {}
+	fotos = Foto.objects.filter(album__nome = 'Cozinha')	
+	data['foto'] = fotos
+
+	return render(request, 'gallery.html', data)
 
 def geral(request):
-	return HttpResponse('teste geral')
+	data = {}
+	fotos = Foto.objects.filter(album__nome = 'Geral')	
+	data['foto'] = fotos	
+	
+	return render(request, 'gallery.html', data)
 
 def churrasqueira(request):
-	return HttpResponse('teste churrasqueira')
+	data = {}
+	fotos = Foto.objects.filter(album__nome = 'Churrasqueira')	
+	data['foto'] = fotos	
+	
+	return render(request, 'gallery.html', data)
 
 def esporte(request):
-	return HttpResponse('teste esportes')
+	data = {}
+	fotos = Foto.objects.filter(album__nome = 'Esportes')	
+	data['foto'] = fotos	
+	
+	return render(request, 'gallery.html', data)
