@@ -1,4 +1,3 @@
-/static
+/static/media
 *.pyc
 vpython27
-*.jpg
